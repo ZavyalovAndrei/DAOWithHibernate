@@ -1,10 +1,6 @@
-## Домашнее задание к лекции 8.3
-## "JDBC API, JdbcTemplate, NamedParametersJdbcTemplate"
+## Домашнее задание к лекции 8.4
+## "ORM, Hibernate"
 
 # Задание №1
 
-#  DAO
-
-# Задание №2
-
-# Миграции.
+#  DAO слой с Hibernate.
