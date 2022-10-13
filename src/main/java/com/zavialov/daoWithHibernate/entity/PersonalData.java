@@ -1,4 +1,4 @@
-package com.zavialov.daoWithHibernate.models;
+package com.zavialov.daoWithHibernate.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

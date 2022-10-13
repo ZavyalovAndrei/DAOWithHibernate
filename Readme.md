@@ -1,6 +1,6 @@
-## Домашнее задание к лекции 8.4
-## "ORM, Hibernate"
+## Домашнее задание к лекции 8.5
+## "Spring Data JPA"
 
 # Задание №1
 
-#  DAO слой с Hibernate.
+#  DAO слой c JPA Repositories.
