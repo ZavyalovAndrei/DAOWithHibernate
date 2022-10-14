@@ -1,6 +1,6 @@
 ## Домашнее задание к лекции 8.5
 ## "Spring Data JPA"
 
-# Задание №1
+# Задание №2
 
-#  DAO слой c JPA Repositories.
+#  @Query.

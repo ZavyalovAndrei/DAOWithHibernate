@@ -3,14 +3,21 @@ package com.zavialov.daoWithHibernate.repository;
 import com.zavialov.daoWithHibernate.entity.PersonalData;
 import com.zavialov.daoWithHibernate.entity.Persons;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface PersonRepository extends JpaRepository<Persons, PersonalData> {
-    List<Persons> findByCity(String name);
 
-    List<Persons> findByPersonalData_AgeLessThanOrderByPersonalData_Age(int age);
+    @Query("Select p from Persons p where p.city = :city")
+    List<Persons>filterByCity(@Param("city") String name);
 
-    Optional<Persons> findByPersonalData_NameAndPersonalData_Surname(String name, String surname);
+    @Query("select p from Persons p where p.personalData.age < :age order by p.personalData.age")
+    List<Persons> filterByAge(@Param("age") int age);
+
+    @Query("select p from Persons p where p.personalData.name = :name and p.personalData.surname = :surname")
+    Optional<Persons> filterByNameAndSurname(@Param("name") String name, @Param("surname") String surname);
+
 }
